@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 03/02/20 23:13:46 by Eclipse SUMO netedit Version 1.5.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="D:\Project\Traffic-Optimisation\Foothill\foothill.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="D:\Project\Traffic-Optimisation\Foothill\foothill.net.xml"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="false"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <netedit>
+        <additional-files value="D:\Project\Traffic-Optimisation\Foothill\det.add.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <e1Detector id="7216_p1_gapout_0" lane="363648686#5_4" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7216_p1_gapout_1" lane="363648686#5_3" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7216_p3_gapout_0" lane="598977856#0_3" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7216_p3_gapout_1" lane="598977856#0_2" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7216_p4_gapout" lane="749736413#1.127_1" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7216_p5_gapout" lane="683763253#1.209_3" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7216_p7_gapout" lane="749736413#1.127_2" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7216_p8_gapout" lane="598977856#0_1" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7217_p1_gapout_0" lane="692123188_5" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7217_p1_gapout_1" lane="692123188_4" pos="-4.00" freq="1.00" file="NULL"/>
+<!--     <e1Detector id="7217_p4_gapout" lane="683763238#1.51_0" pos="-4.00" freq="1.00" file="NULL" name="right turn"/> -->
+    <e1Detector id="7217_p5_gapout" lane="692123191_3" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7217_p4_gapout" lane="683763238#1.51_1" pos="-4.00" freq="1.00" file="NULL" name="permissive left"/>
+    <e1Detector id="7217_p8_gapout_0" lane="621228442#1_2" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7217_p8_gapout_1" lane="621228442#1_1" pos="-4.00" freq="1.00" file="NULL"/>
+<!--     <e1Detector id="7217_p8_gapout_2" lane="621228442#1_0" pos="-4.00" freq="1.00" file="NULL"/> -->
+    <e1Detector id="7218_p1_gapout_0" lane="692513882.255_5" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7218_p1_gapout_1" lane="692513882.255_4" pos="-4.00" freq="1.00" file="NULL"/>
+<!--     <e1Detector id="7218_p4_gapout" lane="10124969#6_0" pos="-4.00" freq="1.00" file="NULL" name="right turn"/> -->
+    <e1Detector id="7218_p5_gapout" lane="591388255#1_3" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7218_p4_gapout" lane="10124969#6_1" pos="-4.00" freq="1.00" file="NULL" name="permissive left"/>
+    <e1Detector id="7218_p8_gapout_0" lane="684464938#1_2" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7218_p8_gapout_1" lane="684464938#1_1" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7219_p1_gapout" lane="692513873.472_4" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7219_p3_gapout_0" lane="591388258#0_3" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7219_p3_gapout_1" lane="591388258#0_2" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7219_p4_gapout_0" lane="139051731#19_1" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7219_p4_gapout_1" lane="139051731#19_2" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7219_p5_gapout" lane="146626843#2_4" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7219_p7_gapout" lane="139051731#19_3" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7219_p8_gapout_0" lane="591388258#0_1" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7219_p8_gapout_1" lane="591388258#0_0" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7503_p4_gapout_0" lane="-146626846#0_2" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7503_p4_gapout_1" lane="-146626846#0_1" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7220_p1_gapout" lane="207412432#0.28_3" pos="-4.00" freq="1.00" file="NULL"/>
+<!--     <e1Detector id="7220_p4_gapout_0" lane="145218802#37_2" pos="-4.00" freq="1.00" file="NULL" name="permissive left"/> -->
+    <e1Detector id="7220_p4_gapout_1" lane="145218802#37_1" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7220_p5_gapout" lane="-207412432#3_3" pos="-4.00" freq="1.00" file="NULL"/>
+<!--     <e1Detector id="7220_p8_gapout_0" lane="-172099960#1_2" pos="-4.00" freq="1.00" file="NULL" name="permissive left"/> -->
+    <e1Detector id="7220_p8_gapout_1" lane="-172099960#1_1" pos="-4.00" freq="1.00" file="NULL"/>
+<!--     <e1Detector id="7221_p1_gapout" lane="697666080_3" pos="-4.00" freq="1.00" file="NULL" name="permissive left"/> -->
+    <e1Detector id="7221_p3_gapout_0" lane="10131659#5.37_0" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7221_p3_gapout_1" lane="10131659#5.37_1" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7221_p4_gapout_0" lane="-69221466#0.18_3" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7221_p4_gapout_1" lane="-69221466#0.18_2" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7221_p4_gapout_2" lane="-69221466#0.18_1" pos="-4.00" freq="1.00" file="NULL"/>
+<!--     <e1Detector id="7221_p5_gapout" lane="-207412426#1_3" pos="-4.00" freq="1.00" file="NULL" name="permissive left"/> -->
+<!--     <e1Detector id="7222_p4_gapout_0" lane="508466788#0_1" pos="-4.00" freq="1.00" file="NULL" name="permissive left"/> -->
+    <e1Detector id="7222_p4_gapout_1" lane="508466788#0_0" pos="-4.00" freq="1.00" file="NULL"/>
+<!--     <e1Detector id="7222_p8_gapout_0" lane="145216628#2_1" pos="-4.00" freq="1.00" file="NULL" name="permissive left"/> -->
+    <e1Detector id="7222_p8_gapout_1" lane="145216628#2_0" pos="-4.00" freq="1.00" file="NULL"/>
+<!--     <e1Detector id="7223_p4_gapout_0" lane="10133290#0_1" pos="-4.00" freq="1.00" file="NULL" name="permissive left"/> -->
+    <e1Detector id="7223_p4_gapout_1" lane="10133290#0_0" pos="-4.00" freq="1.00" file="NULL"/>
+<!--     <e1Detector id="7223_p8_gapout_0" lane="-10150792#1_1" pos="-4.00" freq="1.00" file="NULL" name="permissive left"/> -->
+    <e1Detector id="7223_p8_gapout_1" lane="-10150792#1_0" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7371_p4_gapout" lane="10147126#4_0" pos="-4.00" freq="1.00" file="NULL"/>
+    <e1Detector id="7371_p8_gapout" lane="-10137014#3_0" pos="-4.00" freq="1.00" file="NULL"/>
+
+
+    <e2Detector id="7216_WE_4" lane="363648686#5_4" pos="0.0" length="248.20" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_WE_3" lane="363648686#5_3" pos="0.0" length="248.20" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_WE_2" lane="363648686#5_2" pos="0.0" length="248.20" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_WE_1" lane="363648686#5_1" pos="0.0" length="248.20" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_WE_0" lane="363648686#5_0" pos="0.0" length="248.20" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_SN_2" lane="749736413#1.127_2" pos="0.0" length="50.30" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_SN_1" lane="749736413#1.127_1" pos="0.0" length="50.30" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_SN_0" lane="749736413#1.127_0" pos="0.0" length="50.30" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_EW_3" lane="683763253#1.209_3" pos="0.0" length="46.27" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_EW_2" lane="683763253#1.209_2" pos="0.0" length="46.27" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_EW_1" lane="683763253#1.209_1" pos="0.0" length="46.27" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_EW_0" lane="683763253#1.209_0" pos="0.0" length="46.27" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_NS_3" lane="598977856#0_3" pos="0.0" length="32.85" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_NS_2" lane="598977856#0_2" pos="0.0" length="32.85" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_NS_1" lane="598977856#0_1" pos="0.0" length="32.85" freq="1.00" file="NULL"/>
+    <e2Detector id="7216_NS_0" lane="598977856#0_0" pos="0.0" length="32.85" freq="1.00" file="NULL"/>
+
+    <e2Detector id="7217_WE_2_i" lane="591388269#1.258_2" pos="400.0" length="89.8" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_WE_1_i" lane="591388269#1.258_1" pos="400.0" length="89.8" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_WE_0_i" lane="591388269#1.258_0" pos="400.0" length="89.8" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_WE_5" lane="692123188_5" pos="0" length="22.2" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_WE_4" lane="692123188_4" pos="0" length="22.2" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_WE_3" lane="692123188_3" pos="0" length="22.2" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_WE_2" lane="692123188_2" pos="0" length="22.2" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_WE_1" lane="692123188_1" pos="0" length="22.2" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_WE_0" lane="692123188_0" pos="0" length="22.2" freq="1.00" file="NULL"/>
+
+    <e2Detector id="7217_SN_0_i" lane="-32921656#0_0" pos="100" length="36" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_SN_1" lane="683763238#1.51_1" pos="0" length="20" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_SN_0" lane="683763238#1.51_0" pos="0" length="20" freq="1.00" file="NULL"/>
+
+    <e2Detector id="7217_NS_2" lane="621228442#1_2" pos="0" length="102" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_NS_1" lane="621228442#1_1" pos="0" length="102" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_NS_0" lane="621228442#1_0" pos="0" length="102" freq="1.00" file="NULL"/>
+
+    <e2Detector id="7217_EW_0_i" lane="692513877#1.27_3" pos="140" length="55" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_EW_1_i" lane="692513877#1.27_2" pos="140" length="55" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_EW_2_i" lane="692513877#1.27_1" pos="140" length="55" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_EW_3_i" lane="692513877#1.27_0" pos="140" length="55" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_EW_3" lane="692123191_3" pos="0" length="34" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_EW_2" lane="692123191_2" pos="0" length="34" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_EW_1" lane="692123191_1" pos="0" length="34" freq="1.00" file="NULL"/>
+    <e2Detector id="7217_EW_0" lane="692123191_0" pos="0" length="34" freq="1.00" file="NULL"/>
+
+
+</additional>

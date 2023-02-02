@@ -1,0 +1,9 @@
+defaults:
+  - env: foothill_v1
+  - train: v1
+  - test: v1
+  - benchmark: v1
+  - model: dqn
+  - state: v1
+  - action: v1
+  - reward: v1

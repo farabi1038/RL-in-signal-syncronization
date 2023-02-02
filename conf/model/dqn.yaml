@@ -1,0 +1,14 @@
+model:
+  name: dqn_v1
+  cseed: 1337
+  gpu: -1
+  replay_type: normal
+  opt_type: adam
+  rms_lr: 2.5e-4
+  batchsize: 64
+  lindecaysteps: 25000
+  hidden_channels: 128
+  update_interval: 1
+  n_hidden_channels: 128
+  replay_start_size: 15000
+  target_update_interval: 250

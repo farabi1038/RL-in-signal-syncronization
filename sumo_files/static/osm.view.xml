@@ -1,0 +1,71 @@
+<viewsettings>
+    <scheme name="standard">
+        <persons personMode="0" personQuality="2" person_minSize="1.00" person_exaggeration="10.00" person_constantSize="0" person_constantSizeSelected="0"
+                 personName_show="0" personName_size="60.00" personName_color="0,153,204" personName_bgColor="128,0,0,0" personName_constantSize="1"
+                  personValue_show="0" personValue_size="80.00" personValue_color="cyan" personValue_bgColor="128,0,0,0" personValue_constantSize="1">
+            <colorScheme name="given person/type color">
+                <entry color="blue"/>
+            </colorScheme>
+            <colorScheme name="uniform">
+                <entry color="blue"/>
+            </colorScheme>
+            <colorScheme name="given/assigned person color">
+                <entry color="blue"/>
+            </colorScheme>
+            <colorScheme name="given/assigned type color">
+                <entry color="blue"/>
+            </colorScheme>
+            <colorScheme name="by speed" interpolated="1">
+                <entry color="red" threshold="0.00"/>
+                <entry color="yellow" threshold="0.69"/>
+                <entry color="green" threshold="1.39"/>
+                <entry color="blue" threshold="2.78"/>
+            </colorScheme>
+            <colorScheme name="by mode">
+                <entry color="grey" name="waiting for insertion"/>
+                <entry color="red" name="stopped"/>
+                <entry color="green" name="walking"/>
+                <entry color="blue" name="riding"/>
+                <entry color="cyan" name="accessing trainStop"/>
+                <entry color="yellow" name="waiting for ride"/>
+            </colorScheme>
+            <colorScheme name="by waiting time" interpolated="1">
+                <entry color="blue" threshold="0.00"/>
+                <entry color="cyan" threshold="30.00"/>
+                <entry color="green" threshold="100.00"/>
+                <entry color="yellow" threshold="200.00"/>
+                <entry color="red" threshold="300.00"/>
+            </colorScheme>
+            <colorScheme name="by jammed state" interpolated="1">
+                <entry color="blue" threshold="0.00"/>
+                <entry color="red" threshold="1.00"/>
+            </colorScheme>
+            <colorScheme name="by selection">
+                <entry color="179,179,179" name="unselected"/>
+                <entry color="0,102,204" name="selected"/>
+            </colorScheme>
+            <colorScheme name="by angle">
+                <entry color="yellow"/>
+            </colorScheme>
+            <colorScheme name="random">
+                <entry color="yellow"/>
+            </colorScheme>
+        </persons>
+        <edges laneEdgeMode="29" scaleMode="0" laneShowBorders="1" showBikeMarkings="1" showLinkDecals="1" showLinkRules="1" showRails="1" hideConnectors="0" widthExaggeration="1.00" minSize="0.00" showDirection="0" showSublanes="1" spreadSuperposed="0" edgeParam="EDGE_KEY" laneParam="LANE_KEY" vehicleParam="PARAM_NUMERICAL" vehicleTextParam="PARAM_TEXT" edgeData="speed"
+                edgeName_show="0" edgeName_size="60.00" edgeName_color="orange" edgeName_bgColor="128,0,0,0" edgeName_constantSize="1"
+                internalEdgeName_show="0" internalEdgeName_size="45.00" internalEdgeName_color="128,64,0" internalEdgeName_bgColor="128,0,0,0" internalEdgeName_constantSize="1"
+                cwaEdgeName_show="0" cwaEdgeName_size="60.00" cwaEdgeName_color="magenta" cwaEdgeName_bgColor="128,0,0,0" cwaEdgeName_constantSize="1"
+                streetName_show="0" streetName_size="60.00" streetName_color="yellow" streetName_bgColor="128,0,0,0" streetName_constantSize="1"
+                edgeValue_show="0" edgeValue_size="100.00" edgeValue_color="cyan" edgeValue_bgColor="128,0,0,0" edgeValue_constantSize="1">
+            <colorScheme name="by insertion-backlog (streetwise)" interpolated="1">
+                <entry color="black" threshold="0.00"/>
+                <entry color="green" threshold="5.00"/>
+                <entry color="yellow" threshold="10.00"/>
+                <entry color="red" threshold="100.00"/>
+            </colorScheme>
+        </edges>
+    </scheme>
+    
+    <delay value="0"/>
+
+</viewsettings>

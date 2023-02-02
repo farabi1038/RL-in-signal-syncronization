@@ -1,0 +1,6 @@
+benchmark:
+  status: False
+  max_t: 4
+  n_episodes: 2
+  split: phase_split_7am_v2.csv
+  plan: plan_temp_7am_original.csv

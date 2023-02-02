@@ -1,0 +1,11 @@
+env:
+  name: foothill_v1
+  source: "sumo_files/foothill.7am.sumocfg"
+  randomize: True
+  seed: 1337
+  render: False
+  local_resolution: 300
+  special_volume: None
+  warmup: False
+  warmup_steps: 100
+  per_step: False

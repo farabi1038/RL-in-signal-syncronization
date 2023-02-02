@@ -1,0 +1,74 @@
+<routes>
+  <personFlow begin="0" departPos="-1" end="300" id="nb_flow0" probability="0.00590277777833">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="0" departPos="-1" end="300" id="sb_flow0" probability="0.00590277777833">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="300" departPos="-1" end="600" id="nb_flow300" probability="0.00626666666667">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="300" departPos="-1" end="600" id="sb_flow300" probability="0.00626666666667">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="600" departPos="-1" end="900" id="nb_flow600" probability="0.0062">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="600" departPos="-1" end="900" id="sb_flow600" probability="0.0062">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="900" departPos="-1" end="1200" id="nb_flow900" probability="0.00566666666667">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="900" departPos="-1" end="1200" id="sb_flow900" probability="0.00566666666667">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="1200" departPos="-1" end="1500" id="nb_flow1200" probability="0.00493333333333">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="1200" departPos="-1" end="1500" id="sb_flow1200" probability="0.00493333333333">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="1500" departPos="-1" end="1800" id="nb_flow1500" probability="0.00534591195">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="1500" departPos="-1" end="1800" id="sb_flow1500" probability="0.00534591195">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="1800" departPos="-1" end="2100" id="nb_flow1800" probability="0.00540880503167">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="1800" departPos="-1" end="2100" id="sb_flow1800" probability="0.00540880503167">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="2100" departPos="-1" end="2400" id="nb_flow2100" probability="0.005694444445">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="2100" departPos="-1" end="2400" id="sb_flow2100" probability="0.005694444445">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="2400" departPos="-1" end="2700" id="nb_flow2400" probability="0.00617647058833">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="2400" departPos="-1" end="2700" id="sb_flow2400" probability="0.00617647058833">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="2700" departPos="-1" end="3000" id="nb_flow2700" probability="0.00553191489333">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="2700" departPos="-1" end="3000" id="sb_flow2700" probability="0.00553191489333">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="3000" departPos="-1" end="3300" id="nb_flow3000" probability="0.00574468085167">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="3000" departPos="-1" end="3300" id="sb_flow3000" probability="0.00574468085167">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+  <personFlow begin="3300" departPos="-1" end="3600" id="nb_flow3300" probability="0.00446969697">
+    <walk from="gneE39" to="687877404"/>
+  </personFlow>
+  <personFlow begin="3300" departPos="-1" end="3600" id="sb_flow3300" probability="0.00446969697">
+    <walk from="687877404" to="gneE39"/>
+  </personFlow>
+</routes>

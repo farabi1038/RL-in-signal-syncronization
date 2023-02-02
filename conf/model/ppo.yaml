@@ -1,0 +1,13 @@
+model:
+  name: ppo_v1
+  cseed: 1337
+  gpu: -1
+  clip_threshold: 5
+  bound_mean: True
+  lr: 3e-4
+  weight_decay: 0.0
+  update_interval: 128
+  batchsize: 32
+  epochs: 10
+  entropy_coef: 0.0
+  standardize_advantages: False

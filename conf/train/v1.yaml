@@ -1,0 +1,7 @@
+train:
+  status: False
+  debug: False
+  n_episodes: 300
+  max_t: 50
+  plan: plan_temp_7am_v2.csv
+  split: phase_split_7am_v2.csv

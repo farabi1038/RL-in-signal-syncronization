@@ -1,0 +1,4 @@
+reward:
+  name: v1
+  normalize: False
+  slowness: False
