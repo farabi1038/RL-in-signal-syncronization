@@ -1,0 +1,65 @@
+[2023-02-02 18:31:45,678][__main__][INFO] - Training with the following config:
+env:
+  env:
+    name: foothill_v1
+    source: sumo_files/foothill.7am.sumocfg
+    randomize: true
+    seed: 1337
+    render: false
+    local_resolution: 300
+    special_volume: None
+    warmup: false
+    warmup_steps: 100
+    per_step: false
+train:
+  train:
+    status: true
+    debug: false
+    n_episodes: 300
+    max_t: 50
+    plan: plan_temp_7am_v2.csv
+    split: phase_split_7am_v2.csv
+test:
+  test:
+    status: false
+    max_t: 4
+    n_episodes: 2
+    load: None
+benchmark:
+  benchmark:
+    status: false
+    max_t: 4
+    n_episodes: 2
+    split: phase_split_7am_v2.csv
+    plan: plan_temp_7am_original.csv
+model:
+  model:
+    name: dqn_v1
+    cseed: 1337
+    gpu: -1
+    replay_type: normal
+    opt_type: adam
+    rms_lr: 0.00025
+    batchsize: 64
+    lindecaysteps: 25000
+    hidden_channels: 128
+    update_interval: 1
+    n_hidden_channels: 128
+    replay_start_size: 15000
+    target_update_interval: 250
+state:
+  state:
+    name: v1
+    normalize: false
+action:
+  action:
+    name: v1
+    seed: 1337
+reward:
+  reward:
+    name: v1
+    normalize: false
+    slowness: false
+
+[2023-02-02 18:31:45,699][__main__][INFO] - action space: Box(0.0, 1.0, (5,), float32)
+[2023-02-02 18:31:45,700][__main__][INFO] - observation space: 4

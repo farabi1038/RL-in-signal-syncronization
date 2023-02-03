@@ -56,7 +56,7 @@ class foothill_v1:
         self.all_signals = {"7216":None,"7217":None,"7218":None,"7219":None,"7503":None,"7220":None,"7221":None,"7222":None,"7223":None,"7371":None}
         self.multi_dic = {}
 
-        self.sumoCfg = os.path.join(self.cwd,self.config.env.source)
+        self.sumoCfg = os.path.join(self.cwd,self.config.env.env.source)
         self.sumoBinary = checkBinary('sumo')
 
     def seed(self, seed):
@@ -98,13 +98,13 @@ class foothill_v1:
         for i in self.dict.keys():
             self.dict[i] = np.zeros(8)
         self.state.reset()
-        if self.config.env.randomize:
+        if self.config.env.env.randomize:
             traci_sumocfg_reset(self)
         traci_load(self)
 
-        if self.config.train.status == True or self.config.test.status == True:
-            splitname = self.config.train.split
-            planname = self.config.train.plan
+        if self.config.train.train.status == True or self.config.test.status == True:
+            splitname = self.config.train.train.split
+            planname = self.config.train.train.plan
         elif self.config.benchmark.status == True:
             splitname = self.config.benchmark.split
             planname = self.config.benchmark.plan

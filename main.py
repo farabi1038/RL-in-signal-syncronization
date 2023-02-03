@@ -1,6 +1,7 @@
 import os, sys
 import hydra
 import logging
+from omegaconf import DictConfig, OmegaConf
 
 ### import selectors and trainer
 from env.env_selector import env_selector
@@ -8,21 +9,22 @@ from model.model_selector import model_selector
 from training_module import trainer
 
 ### standard sumo code to ensure sumo_home is inside path
-if 'SUMO_HOME' in os.environ:
-    tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
-    sys.path.append(tools)
-else:
-    sys.exit("Please declare the environment variable 'SUMO_HOME'")
+# if 'SUMO_HOME' in os.environ:
+#     tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
+#     sys.path.append(tools)
+# else:
+#     sys.exit("Please declare the environment variable 'SUMO_HOME'")
 
 ### setting up logger
 logger = logging.getLogger(__name__)
 
 ### attach hydra to main function
-@hydra.main(config_path="conf/config.yaml")
+@hydra.main(config_path="conf", config_name="config.yaml")
 def main(cfg):
+	#print(OmegaConf.to_yaml(cfg))
 	# set config status to True (trigger specific if elses code blocks inside environment file)
-	cfg.train.status = True
-	logger.info(f"Training with the following config:\n{cfg.pretty()}")
+	cfg.train.train.status = True
+	logger.info(f"Training with the following config:\n{OmegaConf.to_yaml(cfg)}")
 
 	# set respective env and agent from selector, then pass them through trainer
 	env = env_selector(cfg, logger)

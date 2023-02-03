@@ -8,8 +8,8 @@ import numpy as np
 import traci
 
 def trainer(cfg, env, agent, logger):
-    n_episodes = cfg.train.n_episodes
-    max_t = cfg.train.max_t
+    n_episodes = cfg.train.train.n_episodes
+    max_t = cfg.train.train.max_t
     best_agent = -999999999999
 
     dic = {}

@@ -141,7 +141,7 @@ def create_signals(self):
         offset = int(self.plan_temp.loc[self.plan_temp['signalid']==int(signalid), 'offset'])
         cycle_length = int(self.plan_temp.loc[self.plan_temp['signalid']==int(signalid), 'cycle_length'])
         table, ring1_start, ring2_start, lead_phase, phase_type, spec_phases = define_ring_barrier(self.plan, signalid = int(signalid), planid = planid)
-        if self.config.benchmark.status == True and self.config.benchmark.plan.find('original') != -1:
+        if self.config.benchmark.benchmark.status == True and self.config.benchmark.plan.find('original') != -1:
             split_temp = pd.merge(self.split, table, on=['signalid','phaseid'], how='right')
             split_temp = split_temp[['signalid','phaseid','split','min_green','yellow','rc','gap_out_max']]
             split_temp = split_temp.drop_duplicates() #sig 7221 split phasing has dup phase 3 and 4, cause problem for following procedure
@@ -198,7 +198,7 @@ def traci_load(self):
 
 ### This function performs a replacement of any important files (reset) before calling traci_load
 def traci_sumocfg_reset(self):
-    if self.config.env.special_volume != "None":
+    if self.config.env.env.special_volume != "None":
         ped_path = os.path.join(self.cwd,"sumo_files/baseline_files/ped_files")
         route_path = os.path.join(self.cwd,"sumo_files/baseline_files/route_files")
         for i in os.listdir(ped_path):
@@ -207,10 +207,10 @@ def traci_sumocfg_reset(self):
         for i in os.listdir(route_path):
             if i.split('.')[2] == self.config.env.special_volume:
                 rfile = os.path.join("baseline_files/route_files",i)
-    elif self.config.env.custom_volume != "None":
+    elif self.config.env.env.custom_volume != "None":
         rfile = os.path.join("custom_route_files", f"{elf.config.env.custom_volume}.xml")
     else:
-        route_files = os.listdir(os.path.join(self.cwd, "sumo_files/route_files"))
+        route_files = os.listdir(os.path.join(self.cwd, "sumo_files/baseline_files/route_files"))
         rfile = np.random.choice(route_files)
         rfile = os.path.join("route_files", rfile)
     # self.hour, self.day = sampled_route_file.split('.')[2], sampled_route_file.split('.')[3]
