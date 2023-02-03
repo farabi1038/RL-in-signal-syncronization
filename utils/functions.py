@@ -201,6 +201,7 @@ def traci_sumocfg_reset(self):
     if self.config.env.env.special_volume != "None":
         ped_path = os.path.join(self.cwd,"sumo_files/baseline_files/ped_files")
         route_path = os.path.join(self.cwd,"sumo_files/baseline_files/route_files")
+        print("route_path",route_path)
         for i in os.listdir(ped_path):
             if i.split('.')[2] == self.config.env.special_volume:
                 pfile = os.path.join("baseline_files/ped_files",i)
@@ -209,10 +210,13 @@ def traci_sumocfg_reset(self):
                 rfile = os.path.join("baseline_files/route_files",i)
     elif self.config.env.env.custom_volume != "None":
         rfile = os.path.join("custom_route_files", f"{elf.config.env.custom_volume}.xml")
+        print("rfile",rfile)
     else:
         route_files = os.listdir(os.path.join(self.cwd, "sumo_files/baseline_files/route_files"))
         rfile = np.random.choice(route_files)
         rfile = os.path.join("route_files", rfile)
+        print("rfile from else ",rfile)
+
     # self.hour, self.day = sampled_route_file.split('.')[2], sampled_route_file.split('.')[3]
     tree = ET.parse("foothill.7am.sumocfg")
     root = tree.getroot()
@@ -292,6 +296,7 @@ def traci_subscribe(self, state_class):
             traci.edge.subscribe(i,[tc.LAST_STEP_VEHICLE_HALTING_NUMBER])
 
     if state_class.lanearea:
+        print("traci.lanearea ",traci.lanearea.getIDList())
         lanearea_list = traci.lanearea.getIDList()
         for i in lanearea_list:
             traci.lanearea.subscribe(i)
