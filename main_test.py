@@ -6,15 +6,15 @@ from env.env_selector import env_selector
 from model.model_selector import model_selector
 from testing_module import tester
 
-if 'SUMO_HOME' in os.environ:
-    tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
-    sys.path.append(tools)
-else:
-    sys.exit("Please declare the environment variable 'SUMO_HOME'")
+#if 'SUMO_HOME' in os.environ:
+#    tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
+#    sys.path.append(tools)
+#else:
+#    sys.exit("Please declare the environment variable 'SUMO_HOME'")
 
 logger = logging.getLogger(__name__)
 
-@hydra.main(config_path="conf/config.yaml")
+@hydra.main(config_path="conf", config_name="config.yaml")
 def main(cfg):
 	cfg.test.status = True
 	logger.info(f"Testing with the following config:\n{cfg.pretty()}")
