@@ -23,7 +23,7 @@ logger = logging.getLogger(__name__)
 def main(cfg):
 	#print(OmegaConf.to_yaml(cfg))
 	# set config status to True (trigger specific if elses code blocks inside environment file)
-	cfg.train.train.status = True
+	#cfg.train.train.status = True
 	logger.info(f"Training with the following config:\n{OmegaConf.to_yaml(cfg)}")
 
 	# set respective env and agent from selector, then pass them through trainer

@@ -3,7 +3,7 @@ defaults:
   - train: v1
   - test: v1
   - benchmark: v1
-  - model: dqn
+  - model: ppo
   - state: v1
   - action: v1
   - reward: v1

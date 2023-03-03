@@ -29,7 +29,9 @@ from utils.functions import (clone_files, create_signals, pack_timing_obs,
 from utils.tingting import (ped_control, define_ring_barrier,
                             convert_split_by_ratio, generate_force_off_point,
                             input_conversion, create_phase_object, state_convert)
-
+import logging
+from omegaconf import DictConfig, OmegaConf
+logger = logging.getLogger(__name__)
 class foothill_v1:
     '''
     foothill_v1 is formulated such that one env.step() is equals to one full simulation. i.e.: 5 or 15 minute simulation using one timing plan
@@ -45,6 +47,7 @@ class foothill_v1:
         self.seeding = None
 
         self.state = state_selector(self.config) # --> returns a function
+        print("self.state",self.state)
         self.action = action_selector(self.config) # --> returns a spaces object
         self.reward = reward_selector(self.config) # --> returns a function
 
@@ -56,7 +59,7 @@ class foothill_v1:
         self.all_signals = {"7216":None,"7217":None,"7218":None,"7219":None,"7503":None,"7220":None,"7221":None,"7222":None,"7223":None,"7371":None}
         self.multi_dic = {}
 
-        self.sumoCfg = os.path.join(self.cwd,self.config.env.env.source)
+        self.sumoCfg = os.path.join(self.cwd,self.config.env.source)
         self.sumoBinary = checkBinary('sumo')
 
     def seed(self, seed):
@@ -98,7 +101,7 @@ class foothill_v1:
         for i in self.dict.keys():
             self.dict[i] = np.zeros(8)
         self.state.reset()
-        if self.config.env.env.randomize:
+        if self.config.env.randomize:
             traci_sumocfg_reset(self)
         traci_load(self)
 
@@ -128,16 +131,17 @@ class foothill_v1:
             phase_seq = signal_object.get_phase_seq()
             sumo_state = state_convert(self.phase_state_index, signalid, phase_seq, state)
             traci.trafficlight.setRedYellowGreenState("%s"%signalid, sumo_state)
-        
+        logger.info(f"inside env1 config:\n{OmegaConf.to_yaml(self.config)}")
         while step < self.config.env.warmup_steps:
             now = traci.simulation.getTime()
             trigger = ped_control(now, trigger)
             loop, edge, lanearea, multi = traci_retrieve(self.state)
-            for item in loop:
-                lvl_1 = item[0:4]
-                for phases in loop[item]:
-                    lvl_2 = int(phases[6:7]) - 1
-                    self.dict[lvl_1][lvl_2] += list(loop[item][phases].values())[0]
+            if loop!=None:
+                for item in loop:
+                    lvl_1 = item[0:4]
+                    for phases in loop[item]:
+                        lvl_2 = int(phases[6:7]) - 1
+                        self.dict[lvl_1][lvl_2] += list(loop[item][phases].values())[0]
             for signalid in self.all_signals.keys():
                 signal_object = self.all_signals[signalid]
                 t = (step-1+signal_object.cycle_length-signal_object.offset)%signal_object.cycle_length
@@ -157,11 +161,12 @@ class foothill_v1:
             now = traci.simulation.getTime()
             trigger = ped_control(now, trigger)
             loop, edge, lanearea, multi= traci_retrieve(self.state)
-            for item in loop:
-                lvl_1 = item[0:4]
-                for phases in loop[item]:
-                    lvl_2 = int(phases[6:7]) - 1
-                    self.dict[lvl_1][lvl_2] += list(loop[item][phases].values())[0]
+            if loop!=None:
+                for item in loop:
+                    lvl_1 = item[0:4]
+                    for phases in loop[item]:
+                        lvl_2 = int(phases[6:7]) - 1
+                        self.dict[lvl_1][lvl_2] += list(loop[item][phases].values())[0]
             for signalid in self.all_signals.keys():
                 signal_object = self.all_signals[signalid]
                 t = (step-1+signal_object.cycle_length-signal_object.offset)%signal_object.cycle_length

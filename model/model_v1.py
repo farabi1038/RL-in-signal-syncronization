@@ -33,25 +33,25 @@ def ppo_v1(cfg, env):
             return self.pi(state), self.v(state)
 
 
-    chainerseed.set_random_seed(cfg.model.cseed)
+    chainerseed.set_random_seed(cfg.model.model.cseed)
     n_actions = env.action.space()
     obs_size = len(env.state)
 
-    obs_normalizer = links.EmpiricalNormalization(obs_size, clip_threshold=cfg.model.clip_threshold)
-    model = A3CFFGaussian(obs_size, n_actions, bound_mean=cfg.model.bound_mean)
-    opt = chainer.optimizers.Adam(alpha=cfg.model.lr, eps=1e-5)
+    obs_normalizer = links.EmpiricalNormalization(obs_size, clip_threshold=cfg.model.model.clip_threshold)
+    model = A3CFFGaussian(obs_size, n_actions, bound_mean=cfg.model.model.bound_mean)
+    opt = chainer.optimizers.Adam(alpha=cfg.model.model.lr, eps=1e-5)
     opt.setup(model)
 
-    if cfg.model.weight_decay > 0:
-        opt.add_hook(NonbiasWeightDecay(cfg.model.weight_decay))
+    if cfg.model.model.weight_decay > 0:
+        opt.add_hook(NonbiasWeightDecay(cfg.model.model.weight_decay))
     
     agent = PPO(model, opt,
                 obs_normalizer=obs_normalizer,
-                gpu=cfg.model.gpu,
-                update_interval=cfg.model.update_interval,
-                minibatch_size=cfg.model.batchsize, epochs=cfg.model.epochs,
-                clip_eps_vf=None, entropy_coef=cfg.model.entropy_coef,
-                standardize_advantages=cfg.model.standardize_advantages,
+                gpu=cfg.model.model.gpu,
+                update_interval=cfg.model.model.update_interval,
+                minibatch_size=cfg.model.model.batchsize, epochs=cfg.model.model.epochs,
+                clip_eps_vf=None, entropy_coef=cfg.model.model.entropy_coef,
+                standardize_advantages=cfg.model.model.standardize_advantages,
                 )
 
     return agent

@@ -431,6 +431,7 @@ class DQN(agent.AttributeSavingMixin, agent.BatchAgent):
 
     def _evaluate_model_and_update_recurrent_states(self, batch_obs, test):
         batch_xs = self.batch_states(batch_obs, self.xp, self.phi)
+        print("batch_xs",batch_xs)
         if self.recurrent:
             if test:
                 batch_av, self.test_recurrent_states = self.model(

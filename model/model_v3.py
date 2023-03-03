@@ -71,12 +71,13 @@ class QFunction(chainer.Chain):
             self.l2 = L.Linear(32, n_actions)
 
     def __call__(self, x):
+        print("x.shape",x.shape)
         h = F.relu(self.l0(x))
         h = F.relu(self.l1(h))
         return chainerrl.action_value.DiscreteActionValue(self.l2(h))
 
 def dqn(cfg, env):
-    chainerseed.set_random_seed(cfg.model.cseed)
+    chainerseed.set_random_seed(cfg.model.model.cseed)
     action_space = env.action.space()
     obs_size = len(env.state)
 
@@ -106,12 +107,12 @@ def dqn(cfg, env):
     opt.setup(q_func)
 
     rbuf_capacity = 5 * 10 ** 5
-    if cfg.model.replay_type == "prioritized":
-        betasteps = ((cfg.train.max_t * cfg.train.n_episodes) - cfg.model.replay_start_size) \
-            // cfg.model.update_interval
+    if cfg.model.model.replay_type == "prioritized":
+        betasteps = ((cfg.train.max_t * cfg.train.n_episodes) - cfg.model.model.replay_start_size) \
+            // cfg.model.model.update_interval
         rbuf = replay_buffer.PrioritizedReplayBuffer(
             rbuf_capacity, betasteps=betasteps)
-    elif cfg.model.replay_type == "normal":
+    elif cfg.model.model.replay_type == "normal":
         rbuf = replay_buffer.ReplayBuffer(rbuf_capacity)
 
     agent = DQN(q_func, opt, rbuf, gpu=-1, gamma=0.99,

@@ -198,7 +198,7 @@ def traci_load(self):
 
 ### This function performs a replacement of any important files (reset) before calling traci_load
 def traci_sumocfg_reset(self):
-    if self.config.env.env.special_volume != "None":
+    if self.config.env.special_volume != "None":
         ped_path = os.path.join(self.cwd,"sumo_files/baseline_files/ped_files")
         route_path = os.path.join(self.cwd,"sumo_files/baseline_files/route_files")
         print("route_path",route_path)
@@ -208,7 +208,7 @@ def traci_sumocfg_reset(self):
         for i in os.listdir(route_path):
             if i.split('.')[2] == self.config.env.special_volume:
                 rfile = os.path.join("baseline_files/route_files",i)
-    elif self.config.env.env.custom_volume != "None":
+    elif self.config.env.custom_volume != "None":
         rfile = os.path.join("custom_route_files", f"{elf.config.env.custom_volume}.xml")
         print("rfile",rfile)
     else:
@@ -240,7 +240,7 @@ loop = {712:{edge1: value, edge2: value, edge3: value}}
 def traci_retrieve(state_class):
 
     loop, edge, lanearea, multi = None, None, None, None
-
+    #print("state_class.induction",state_class.induction)
     if state_class.induction:
         loop = traci.inductionloop.getAllContextSubscriptionResults()
     if state_class.edge_reduced or state_class.edge_full or state_class.edge_full_side:
