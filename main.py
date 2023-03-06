@@ -8,7 +8,7 @@ from env.env_selector import env_selector
 from model.model_selector import model_selector
 from training_module import trainer
 
-### standard sumo code to ensure sumo_home is inside path
+## standard sumo code to ensure sumo_home is inside path
 # if 'SUMO_HOME' in os.environ:
 #     tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
 #     sys.path.append(tools)

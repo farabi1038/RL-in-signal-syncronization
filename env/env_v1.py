@@ -182,7 +182,7 @@ class foothill_v1:
 
         obs = self.state.retrieve()
         obs = pack_timing_obs(self, obs)
-
+        print("obs",obs)
         return obs
 
     def step_local(self, action):

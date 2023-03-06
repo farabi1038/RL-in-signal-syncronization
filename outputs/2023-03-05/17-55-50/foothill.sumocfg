@@ -1,0 +1,28 @@
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/static/foothill.net.xml" />
+        <route-files value="/Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/route_files/routes.sample.5pm.xml, /Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/dynamic/ped.route.7am.xml" />
+        
+        <additional-files value="/Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/static/osm.poly.xml, /Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/static/det.gapout.add.xml, /Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/dynamic/ped.tls.7am.xml" />
+    </input>
+
+    <processing>
+        <ignore-route-errors value="true" />
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="180" />
+    </routing>
+
+    <report>
+        <verbose value="true" />
+        <duration-log.statistics value="true" />
+        <no-step-log value="true" />
+    </report>
+
+    <gui_only>
+        <gui-settings-file value="/Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/static/osm.view.xml" />
+    </gui_only>
+
+</configuration>
