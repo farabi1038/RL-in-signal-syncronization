@@ -1,6 +1,15 @@
 import gymnasium as gym
 import sumo_rl
-env = gym.make('sumo-rl-v0',
+import hydra
+import logging
+from omegaconf import DictConfig, OmegaConf
+
+### import selectors and trainer
+from env.env_selector import env_selector
+from model.model_selector import model_selector
+from training_module import trainer
+logger = logging.getLogger(__name__)
+env = gym.make('foothill_v1',
                 net_file='/Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/foothill.net.xml',
                 route_file='/Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/route.sample.xml',
                 out_csv_name='path_to_output.csv',

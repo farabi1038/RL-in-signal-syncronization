@@ -7,7 +7,14 @@ import chainerrl
 import numpy as np
 import traci
 
+from tqdm import trange
+from stable_baselines3.common.evaluation import evaluate_policy
+import shutil
+import subprocess
+from stable_baselines3.dqn.dqn import DQN
+
 def trainer(cfg, env, agent, logger):
+    '''
     n_episodes = cfg.train.train.n_episodes
     max_t = cfg.train.train.max_t
     best_agent = -999999999999
@@ -59,3 +66,16 @@ def trainer(cfg, env, agent, logger):
     agent.save(os.path.join(os.getcwd(), "latest_agent"))
     logger.info(f"Training completed.")
     traci.close()
+    '''
+    model = DQN(
+        env=env,
+        policy="MlpPolicy",
+        learning_rate=0.001,
+        learning_starts=0,
+        train_freq=1,
+        target_update_interval=500,
+        exploration_initial_eps=0.05,
+        exploration_final_eps=0.01,
+        verbose=1,
+    )
+    model.learn(total_timesteps=100000)
