@@ -19,6 +19,11 @@ from training_module import trainer
 logger = logging.getLogger(__name__)
 
 ### attach hydra to main function
+
+#echo 'export SUMO_HOME="/Users/ibnefarabishihab/Documents/GitHub/sumo"' >> ~/.bashrc
+#source ~/.bashrc
+#export LIBSUMO_AS_TRACI=1
+
 @hydra.main(config_path="conf", config_name="config.yaml")
 def main(cfg):
 	#print(OmegaConf.to_yaml(cfg))

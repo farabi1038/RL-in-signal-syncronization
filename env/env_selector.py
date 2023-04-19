@@ -1,6 +1,8 @@
 #from .env_v1 import foothill_v1
 #from .env_v2 import foothill_v2
-import gym
+import gymnasium as gym
+import sys
+sys.modules["gym"] = gym
 from sumo_rl import SumoEnvironment
 def env_selector(cfg, logger):
 

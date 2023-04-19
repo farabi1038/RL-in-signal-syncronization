@@ -8,12 +8,21 @@
 
 
 import gymnasium as gym
+import sys
+sys.modules["gym"] = gym
 
 from stable_baselines3 import PPO
 from stable_baselines3.dqn.dqn import DQN
+from sumo_rl import SumoEnvironment
 
-def model_selector(cfg, env):
+def model_selector(cfg,env2):
 	if cfg.model.model.name == "ppo_v1":
+
+		env = SumoEnvironment(net_file='/Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/foothill.net.xml',
+                route_file='/Users/ibnefarabishihab/Documents/GitHub/RL-in-signal-syncronization/sumo_files/route.sample.xml',
+                out_csv_name='path_to_output.csv',
+                use_gui=False,
+                num_seconds=100000)
 		#return ppo_v1(cfg, env)
 		return  DQN(
         env=env,
