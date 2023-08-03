@@ -1,4 +1,4 @@
-# Deep Reinforcement Learning Setup for Foothill Dr., Salt Lake City, Utah #
+# Deep Reinforcement Learning Setup for Foothill Dr., Salt Lake City, Utah # (This documentation for installation is absolute)
 
 ### Install Miniconda ###
 Follow instructions on the [Anaconda](https://docs.conda.io/en/latest/miniconda.html) website to install Miniconda for your operating system.
@@ -163,3 +163,54 @@ python main_benchmark.py benchmark.split=<insert split csv here> benchmark.plan=
 |-- main.py
 |-- training_module.py
 ```
+
+New installation iunstruction for mac :
+
+Install sumo from here : https://www.youtube.com/watch?v=JAAPLxgQ5UQ&t=189s&ab_channel=EngineeringClinic
+
+These are the commands :
+
+SUMO can be installed in all major OS like Linux, Windows and Mac OS. This video shows you how to install SUMO in Mac OS Monterey or Big Sur.
+
+Installation Instructions:
+Prerequisites: XCODE should be installed first.
+
+Step 1: Install Home-brew - Open a Terminal and paste the following command
+$] /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Hom...)"
+$] brew update
+
+$] brew install cmake
+$] brew install --cask xquartz
+$] brew install xerces-c fox proj gdal gl2ps
+
+$] brew install python swig eigen pygobject3 gtk+3 adwaita-icon-theme
+$] python3 -m pip install texttest
+
+$] git clone --recursive https://github.com/eclipse/sumo
+$] export SUMO_HOME="$PWD/sumo"
+
+$] cd $SUMO_HOME
+$] mkdir build/cmake-build
+$] cd build/cmake-build
+$] cmake ../..
+
+$] cd $SUMO_HOME/build/cmake-build
+$] cmake --build . --parallel $(sysctl -n hw.ncpu)
+
+Once the installation is completed. Close the terminal and open it again and execute the following steps to open sumo and sumo-gui
+
+$] export SUMO_HOME="$PWD/sumo"
+$] cd sumo/bin
+$] ./sumo
+Then open the app, Xquartz (This is needed if you want to open the sumo-gui) 
+
+$] ./sumo-gui 
+(The Sumo window opens).
+
+Once done create a conda env with python version 3.8
+
+Then install stabel baseline from here : https://stable-baselines3.readthedocs.io/en/master/guide/install.html
+install the below :
+pip3 install traci
+pip3 install sumo_rl
+
