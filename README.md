@@ -1,4 +1,4 @@
-# Deep Reinforcement Learning Setup for Foothill Dr., Salt Lake City, Utah # (This documentation for installation is absolute)
+# Deep Reinforcement Learning Setup for Foothill Dr., Salt Lake City, Utah # (This documentation now support python 3.8)
 
 ### Install Miniconda ###
 Follow instructions on the [Anaconda](https://docs.conda.io/en/latest/miniconda.html) website to install Miniconda for your operating system.
